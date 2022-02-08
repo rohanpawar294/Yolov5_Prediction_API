@@ -16,9 +16,7 @@ docker pull rohanpawar294/yolo_v5_api_flask:yolov5_v2
 
 # Run manually docker Image
 
-docker run --device=/dev/video0:/dev/video0 -p 0.0.0.0:9999:9999 -p 8888:8888 rohanpawar294/yolo_v5_api_flask:yolov5_v2
-
-
+docker run -itd --device=/dev/video0:/dev/video0 -p 0.0.0.0:9999:9999 -p 8888:8888 rohanpawar294/yolo_v5_api_flask:yolov5_v2
 
 
 # Commands Deployment On Kubernetes
@@ -35,4 +33,7 @@ kubectl describe pod <pod_name>
 
 kubectl port-forward <pod_name> 9999:9999
 
+# To check hosted video 
 
+1.open web application
+2.Open this URL http://<port-forward_ip>:9999/ 
