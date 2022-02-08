@@ -1,6 +1,6 @@
 # Yolov5_Prediction_API
 
-#Steps to bulid Dockerfile
+# Steps to bulid Dockerfile
 
 git clone https://github.com/rohanpawar294/Yolov5_Prediction_API.git
 
