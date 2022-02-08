@@ -12,3 +12,12 @@ RUN python -m pip install --upgrade pip
 RUN pip install --no-cache -r requirements.txt coremltools onnx gsutil notebook
 RUN pip install --no-cache -U numpy Pillow
 
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+# Copy contents
+COPY . /usr/src/app
+
+ENV HOME=/usr/src/app
+
+CMD [ "python3", "app.py"]
